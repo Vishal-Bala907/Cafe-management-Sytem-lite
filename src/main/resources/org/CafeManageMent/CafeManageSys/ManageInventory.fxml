@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- created By instagram -> vishalbala_here -->
+
+<ScrollPane fitToHeight="true" fitToWidth="true"
+	prefHeight="736.0" prefWidth="1280.0"
+	xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="org.CafeManageMent.CafeManageSys.ManageInventoryController">
+	<content>
+		<AnchorPane maxHeight="1.7976931348623157E308"
+			maxWidth="1.7976931348623157E308" prefHeight="736.0"
+			prefWidth="1280.0" style="-fx-background-color: #211C6A;">
+			<children>
+				<ScrollPane fitToHeight="true" fitToWidth="true"
+					layoutX="769.0" prefHeight="734.0" prefWidth="509.0"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
+					AnchorPane.topAnchor="0.0">
+					<content>
+						<AnchorPane prefHeight="826.0" prefWidth="518.0"
+							style="-fx-background-color: #ccf8ff;">
+							<children>
+								<HBox alignment="CENTER" layoutX="-3.0" layoutY="700.0"
+									prefHeight="52.0" prefWidth="492.0" spacing="100.0"
+									AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="-3.0">
+									<children>
+										<Button fx:id="cancel" minHeight="50.0"
+											minWidth="100.0" mnemonicParsing="false"
+											onAction="#updateItem" style="-fx-background-color: #001cba;"
+											text="UPDATE" textFill="WHITE">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Button>
+										<Button fx:id="done" minHeight="50.0" minWidth="100.0"
+											mnemonicParsing="false" onAction="#removeItem"
+											style="-fx-background-color: #001cba;" text="REMOVE"
+											textFill="WHITE">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Button>
+									</children>
+								</HBox>
+								<VBox layoutX="14.0" layoutY="88.0" prefHeight="647.0"
+									prefWidth="455.0" spacing="14.0"
+									style="-fx-background-color: #5980ff; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;"
+									AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="17.0"
+									AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="88.0">
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<padding>
+										<Insets left="10.0" right="10.0" top="30.0" />
+									</padding>
+									<children>
+										<Label text="Name" textFill="WHITE" />
+										<TextField fx:id="nameText" minHeight="50.0"
+											minWidth="400.0" prefWidth="400.0" promptText="Name"
+											style="-fx-background-radius: 10px;">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</TextField>
+										<Label text="Price" textFill="WHITE" />
+										<TextField fx:id="priceText" minHeight="50.0"
+											minWidth="400.0" prefWidth="400.0" promptText="Price"
+											style="-fx-background-radius: 10px;">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</TextField>
+										<Label text="Item Id" textFill="WHITE" />
+										<TextField fx:id="itemIdText" minHeight="50.0"
+											minWidth="400.0" prefWidth="400.0"
+											promptText="Must Be Unique"
+											style="-fx-background-radius: 10px;">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</TextField>
+										<Label text="Quantity" textFill="WHITE" />
+										<TextField fx:id="quantityText" minHeight="50.0"
+											minWidth="400.0" prefWidth="400.0" promptText="Quantity"
+											style="-fx-background-radius: 10px;">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</TextField>
+										<Label text="Image" textFill="WHITE" />
+										<HBox prefHeight="173.0" prefWidth="433.0" spacing="25.0"
+											style="-fx-border-color: white;">
+											<children>
+												<Button fx:id="add" minHeight="50.0" minWidth="100.0"
+													mnemonicParsing="false" onAction="#addNewImage"
+													style="-fx-background-color: #001cba;" text="New Image"
+													textFill="WHITE">
+													<font>
+														<Font name="System Bold" size="20.0" />
+													</font>
+												</Button>
+												<ImageView fx:id="itemIimage" fitHeight="170.0"
+													fitWidth="208.0" pickOnBounds="true" preserveRatio="true" />
+											</children>
+										</HBox>
+									</children>
+								</VBox>
+								<HBox alignment="CENTER" layoutX="14.0" layoutY="14.0"
+									prefHeight="57.0" prefWidth="459.0" spacing="25.0"
+									style="-fx-background-color: #59bfff;"
+									AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+									<children>
+										<TextField fx:id="searchItemText" prefHeight="30.0"
+											prefWidth="286.0" promptText="Enter product name">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</TextField>
+										<Button fx:id="serach" lineSpacing="25.0"
+											mnemonicParsing="false" onAction="#searchItem"
+											prefHeight="30.0" style="-fx-background-color: #001cba;"
+											text="Search" textFill="WHITE">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Button>
+									</children>
+								</HBox>
+							</children>
+						</AnchorPane>
+					</content>
+				</ScrollPane>
+				<TableView fx:id="InventoryTreeView" minWidth="750.0"
+					prefHeight="734.0" prefWidth="772.0" AnchorPane.bottomAnchor="0.0"
+					AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="506.0"
+					AnchorPane.topAnchor="0.0">
+					<columns>
+						<TableColumn fx:id="sn"
+							maxWidth="1.7976931348623157E308" prefWidth="53.0"
+							resizable="false" text="S.N." />
+						<TableColumn fx:id="nameColumn" minWidth="0.0"
+							prefWidth="270.0" resizable="false" text="Name" />
+						<TableColumn fx:id="quantityColumn" editable="false"
+							prefWidth="127.0" resizable="false" text="Quantity" />
+						<TableColumn fx:id="priceColumn" prefWidth="128.0"
+							resizable="false" text="Price" />
+						<TableColumn fx:id="itemIdColumn" prefWidth="109.0"
+							resizable="false" text="item ID" />
+						<TableColumn fx:id="itemSold" prefWidth="83.0"
+							resizable="false" text="itemSold" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+	</content>
+</ScrollPane>
